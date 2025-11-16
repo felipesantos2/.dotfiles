@@ -4,7 +4,7 @@ alias cpinstall="docker run --rm -it  \
   composer/composer:latest \
   composer install --ignore-platform-reqs"
 
-alias cpupdate="docker run --rm -it  \
+alias cpupdate="docker run --rm -it  \command
   --volume $PWD:/app \
   --user $(id -u):$(id -g) \
   composer/composer:latest \
@@ -16,6 +16,7 @@ alias cpdu="docker run --rm -it  \
   composer/composer:latest \
   composer update"
 
+# TODO
 # docker run --rm \
 #     --user "$(id -u):$(id -g)" \
 #     -v "$(pwd):/var/www/html" \
@@ -23,9 +24,9 @@ alias cpdu="docker run --rm -it  \
 #     composer/composer:latest \
 #     composer install --ignore-platform-reqs
 
-
-docker run --rm -it  \
-  --volume $PWD:/app \
-  --user $(id -u):$(id -g) \
-  composer/composer:latest \
-  php artisan sail:install
+# TODO - run an php script
+# docker run --rm -it  \
+#   --volume $PWD:/app \
+#   --user $(id -u):$(id -g) \
+#   composer/composer:latest \
+#   php artisan sail:install
