@@ -1,27 +1,20 @@
-alias composer-install="docker run --rm -it  \
+alias cpinstall="docker run --rm -it  \
   --volume $PWD:/app \
   --user $(id -u):$(id -g) \
   composer/composer:latest \
   composer install --ignore-platform-reqs"
 
-alias composer-update="docker run --rm -it  \
+alias cpupdate="docker run --rm -it  \
   --volume $PWD:/app \
   --user $(id -u):$(id -g) \
   composer/composer:latest \
   composer update"
 
-alias composer-dump-autoload="docker run --rm -it  \
+alias cpdu="docker run --rm -it  \
   --volume $PWD:/app \
   --user $(id -u):$(id -g) \
   composer/composer:latest \
   composer update"
-
-alias composer-du="docker run --rm -it  \
-  --volume $PWD:/app \
-  --user $(id -u):$(id -g) \
-  composer/composer:latest \
-  composer update"
-
 
 # docker run --rm \
 #     --user "$(id -u):$(id -g)" \
