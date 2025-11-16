@@ -22,3 +22,10 @@ alias cpdu="docker run --rm -it  \
 #     -w /var/www/html \
 #     composer/composer:latest \
 #     composer install --ignore-platform-reqs
+
+
+docker run --rm -it  \
+  --volume $PWD:/app \
+  --user $(id -u):$(id -g) \
+  composer/composer:latest \
+  php artisan sail:install
