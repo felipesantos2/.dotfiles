@@ -4,7 +4,6 @@ alias composer-install="docker run --rm -it  \
   composer/composer:latest \
   composer install --ignore-platform-reqs"
 
-
 alias composer-update="docker run --rm -it  \
   --volume $PWD:/app \
   --user $(id -u):$(id -g) \
@@ -12,6 +11,12 @@ alias composer-update="docker run --rm -it  \
   composer update"
 
 alias composer-dump-autoload="docker run --rm -it  \
+  --volume $PWD:/app \
+  --user $(id -u):$(id -g) \
+  composer/composer:latest \
+  composer update"
+
+alias composer-du="docker run --rm -it  \
   --volume $PWD:/app \
   --user $(id -u):$(id -g) \
   composer/composer:latest \
